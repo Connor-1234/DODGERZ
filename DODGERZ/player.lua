@@ -19,16 +19,16 @@ end
 
 function Player:move(dt)
   --check for key inputs, and adjust player coordinates based on player speed. Account for deltatime
-  if love.keyboard.isDown("w") then
+  if love.keyboard.isDown("up") then
     self.y = self.y - self.speed * love.timer.getDelta()
     self.img = love.graphics.newImage("assets/playerIMGUP.png")
-  elseif love.keyboard.isDown("s") then
+  elseif love.keyboard.isDown("down") then
     self.y = self.y + self.speed * love.timer.getDelta()
     self.img = love.graphics.newImage("assets/playerIMGDOWN.png")
-  elseif love.keyboard.isDown("d") then
+  elseif love.keyboard.isDown("right") then
     self.x = self.x + self.speed * love.timer.getDelta()
     self.img = love.graphics.newImage("assets/playerIMGRIGHT.png")
-  elseif love.keyboard.isDown("a") then
+  elseif love.keyboard.isDown("left") then
     self.x = self.x - self.speed * love.timer.getDelta()
     self.img = love.graphics.newImage("assets/playerIMGLEFT.png")
   end
